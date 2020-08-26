@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Ticket</title>
+</head>
+<body>
+    <nav>
+        <a href="/fights/<%= flight._id %>">FLIGHT DETAIL</a> 
+        &nbsp;&nbsp;&nbsp;&nbsp;| |&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/flights" id="allFlights">ALL FLIGHTS</a>
+    </nav>
+    <h1>New Ticket</h1>
+    <form action="/flights/<%= flight._id %>/tickets", method="POST">
+        <section class="center">
+            <label>Seat:
+                <input name="seat" type="text">
+            </label><br>
+            <label>Price:
+                <input name="price" type="number">
+            </label><br>
+        </section>
+        <div class="center"><button class="submitBtn" type="submit">Add Ticket</button></div>
+    </form>
+</body> 
+</html>
